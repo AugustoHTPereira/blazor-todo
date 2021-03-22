@@ -1,0 +1,38 @@
+<div class="nav content">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h1>Todo Blazor WASM App</h1>
+
+        <span>
+            @TodoCount left todo
+        </span>
+    </div>
+</div>
+
+<style>
+    .nav.content {
+        height: 165px;
+        width: 100%;
+
+        padding: 15px 120px;
+        background-color: #43aa8b;
+    }
+
+    .nav.content h1 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin: 0;
+        color: white;
+    }
+
+    .nav.content span {
+        font-size: .8rem;
+        font-weight: 400;
+        color: white;
+
+    }
+</style>
+
+@code {
+    [Parameter]
+    public int TodoCount { get; set; }
+}
