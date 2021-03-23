@@ -1,5 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/BlazorToastify" Path="C:\Users\augus\.nuget\packages\blazortoastify\1.0.1\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/Fluxor.Blazor.Web" Path="C:\Users\augus\.nuget\packages\fluxor.blazor.web\4.0.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="/" Path="D:\dev\TodoBlazor\bin\Debug\net5.0\wwwroot\" />
-</StaticWebAssets>

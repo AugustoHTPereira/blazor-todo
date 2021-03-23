@@ -13,13 +13,19 @@
         <legend>Add new todo to your todo list</legend>
     </div>
 
-    <EditForm class="body" OnSubmit="HandleAddTodoAsync" Model="todo">
+    <EditForm class="body" OnValidSubmit="@HandleValidSubmit" Model="@todo">
+        <DataAnnotationsValidator />
+        @* <ValidationSummary /> *@
+
+    <div class="input-field-content">
         <div class="input-field">
-            <InputText type="text" id="name" placeholder="Name of todo" aria-placeholder="Name of todo"
+            <InputText type="text" id="name" DisplayName="Todo" placeholder="Name of todo" aria-placeholder="Name of todo"
                 aria-autocomplete="none" autocomplete="off" @bind-Value="todo.Name" />
 
-            <button>Submit</button>
+            <ValidationMessage For="@(() => todo.Name)" />
         </div>
+        <button>Submit</button>
+    </div>
     </EditForm>
 
     @if (TodoState.Value.Todos.Count > 0)
@@ -51,7 +57,7 @@
 </div>
 
 @code {
-    public Todo todo = new Todo();
+    private Todo todo = new Todo();
 
     private async Task HandleAddTodoAsync()
     {
@@ -72,6 +78,8 @@
         Dispatcher.Dispatch(new ToogleTodo(todo));
         await ToastService.AddToastAsync("The todo is now " + (todo.Done ? "done" : "left"), "danger");
     }
+
+    public async Task HandleValidSubmit() => await HandleAddTodoAsync();
 }
 
 <style>
@@ -118,11 +126,19 @@
         padding-bottom: 25px;
     }
 
-    .index .input-field {
+    .input-field-content {
         display: flex;
     }
 
-    .index .input-field input+button {
+    .index .input-field {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        position: relative;
+    }
+
+    .index .input-field-content .input-field+button {
         margin-left: 15px;
     }
 
@@ -191,5 +207,12 @@
 
         height: 25px;
         width: 25px;
+    }
+
+    .validation-message {
+        color: red;
+        font-size: .8rem;
+        position: absolute;
+        right: 10px;
     }
 </style>
