@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dJybGOMa477fBtywYWjT5Fk1GviUI5Ov5D64wTWDTgvt/5HnNk3Jb9n/ACbwBiDn4Aty3yDR9Z9CGziLeFtZPg==",
+  "dgSpecHash": "OmK901MIJCFnRkvehsn66JK9K5p0BNbtBzuJBsFQIOSacyb+SndZE/Jcw88NDLZxpNPiwNAAd3EjBzJ7OJzZEg==",
   "success": true,
   "projectFilePath": "D:\\dev\\TodoBlazor\\TodoBlazor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\augus\\.nuget\\packages\\blazortoastify\\1.0.1\\blazortoastify.1.0.1.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\fluxor\\4.0.0\\fluxor.4.0.0.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\fluxor.blazor.web\\4.0.0\\fluxor.blazor.web.4.0.0.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\fluxor.blazor.web.reduxdevtools\\4.0.0\\fluxor.blazor.web.reduxdevtools.4.0.0.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.4\\microsoft.aspnetcore.authorization.5.0.4.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.4\\microsoft.aspnetcore.components.5.0.4.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.4\\microsoft.aspnetcore.components.analyzers.5.0.4.nupkg.sha512",
@@ -28,6 +32,7 @@
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.jsinterop\\5.0.4\\microsoft.jsinterop.5.0.4.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.4\\microsoft.jsinterop.webassembly.5.0.4.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\augus\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.4\\microsoft.netcore.app.runtime.browser-wasm.5.0.4.nupkg.sha512"

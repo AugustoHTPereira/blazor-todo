@@ -2,12 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BlazorToastify" Version="1.0.1" />
+    <PackageReference Include="Fluxor" Version="4.0.0" />
+    <PackageReference Include="Fluxor.Blazor.Web" Version="4.0.0" />
+    <PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="4.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.4" PrivateAssets="all" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
 
 </Project>

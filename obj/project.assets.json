@@ -2,6 +2,73 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "BlazorToastify/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/BlazorToastify.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BlazorToastify.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorToastify.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorToastify.props": {}
+        }
+      },
+      "Fluxor/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.8"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Fluxor.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Fluxor.dll": {}
+        }
+      },
+      "Fluxor.Blazor.Web/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Fluxor": "4.0.0",
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.AspNetCore.Components.Web": "3.1.8"
+        },
+        "compile": {
+          "lib/net5.0/Fluxor.Blazor.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Fluxor.Blazor.Web.dll": {}
+        },
+        "build": {
+          "buildTransitive/Fluxor.Blazor.Web.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Fluxor.Blazor.Web.props": {}
+        }
+      },
+      "Fluxor.Blazor.Web.ReduxDevTools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Fluxor": "4.0.0",
+          "Fluxor.Blazor.Web": "4.0.0",
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.AspNetCore.Components.Web": "3.1.8",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/net5.0/Fluxor.Blazor.Web.ReduxDevTools.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Fluxor.Blazor.Web.ReduxDevTools.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.4": {
         "type": "package",
         "dependencies": {
@@ -286,6 +353,15 @@
         },
         "runtime": {
           "lib/net5.0/Microsoft.JSInterop.WebAssembly.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "System.IO.Pipelines/5.0.1": {
@@ -308,6 +384,73 @@
       }
     },
     "net5.0/browser-wasm": {
+      "BlazorToastify/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/BlazorToastify.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BlazorToastify.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorToastify.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorToastify.props": {}
+        }
+      },
+      "Fluxor/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.8"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Fluxor.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Fluxor.dll": {}
+        }
+      },
+      "Fluxor.Blazor.Web/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Fluxor": "4.0.0",
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.AspNetCore.Components.Web": "3.1.8"
+        },
+        "compile": {
+          "lib/net5.0/Fluxor.Blazor.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Fluxor.Blazor.Web.dll": {}
+        },
+        "build": {
+          "buildTransitive/Fluxor.Blazor.Web.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Fluxor.Blazor.Web.props": {}
+        }
+      },
+      "Fluxor.Blazor.Web.ReduxDevTools/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Fluxor": "4.0.0",
+          "Fluxor.Blazor.Web": "4.0.0",
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.AspNetCore.Components.Web": "3.1.8",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/net5.0/Fluxor.Blazor.Web.ReduxDevTools.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Fluxor.Blazor.Web.ReduxDevTools.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.4": {
         "type": "package",
         "dependencies": {
@@ -592,6 +735,15 @@
         },
         "runtime": {
           "lib/net5.0/Microsoft.JSInterop.WebAssembly.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "System.IO.Pipelines/5.0.1": {
@@ -615,6 +767,74 @@
     }
   },
   "libraries": {
+    "BlazorToastify/1.0.1": {
+      "sha512": "pa4yFAs6X5/mXerzQjg1SmsZQ+Gc4HQhTrQwmUL0ZUqR5p9s6uRljzQB2C8rr2dj+r2UQa1j7HQWesnVEOsu7g==",
+      "type": "package",
+      "path": "blazortoastify/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazortoastify.1.0.1.nupkg.sha512",
+        "blazortoastify.nuspec",
+        "build/BlazorToastify.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorToastify.props",
+        "buildTransitive/BlazorToastify.props",
+        "image.png",
+        "lib/netstandard2.0/BlazorToastify.dll",
+        "staticwebassets/blazor-toastify-style.css"
+      ]
+    },
+    "Fluxor/4.0.0": {
+      "sha512": "+unWxdo4QdpjN/InYbO0crCYA04nUi+e+On0gGJinpx3l9oU6yxEG356JzBZ/mobwI5HxhVwJz4tTXaOUJAxPQ==",
+      "type": "package",
+      "path": "fluxor/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluxor-small-logo.png",
+        "fluxor.4.0.0.nupkg.sha512",
+        "fluxor.nuspec",
+        "lib/netcoreapp3.1/Fluxor.dll",
+        "lib/netstandard2.0/Fluxor.dll",
+        "lib/netstandard2.1/Fluxor.dll"
+      ]
+    },
+    "Fluxor.Blazor.Web/4.0.0": {
+      "sha512": "E9sy+YUjl36KB4XDmDN5U0AI6QRZlrWqKsSKFqylybNwjvDjjJQB6XuEduiwfpagbqPMiC8FgT7rDeZo52ssjA==",
+      "type": "package",
+      "path": "fluxor.blazor.web/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Fluxor.Blazor.Web.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Fluxor.Blazor.Web.props",
+        "buildTransitive/Fluxor.Blazor.Web.props",
+        "fluxor-blazor-logo-small.png",
+        "fluxor.blazor.web.4.0.0.nupkg.sha512",
+        "fluxor.blazor.web.nuspec",
+        "lib/net5.0/Fluxor.Blazor.Web.dll",
+        "lib/netstandard2.0/Fluxor.Blazor.Web.dll",
+        "lib/netstandard2.1/Fluxor.Blazor.Web.dll",
+        "staticwebassets/scripts/index.js"
+      ]
+    },
+    "Fluxor.Blazor.Web.ReduxDevTools/4.0.0": {
+      "sha512": "hsjl+pN3QfOu4ua6q4YxJuJfk7Ic91hEMjEg60a0QNEEsPy8bePB5rRGkbK3++Ifex2wcf9kugL9m3vBOUphUQ==",
+      "type": "package",
+      "path": "fluxor.blazor.web.reduxdevtools/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluxor-blazor-reduxdevtools-small.png",
+        "fluxor.blazor.web.reduxdevtools.4.0.0.nupkg.sha512",
+        "fluxor.blazor.web.reduxdevtools.nuspec",
+        "lib/net5.0/Fluxor.Blazor.Web.ReduxDevTools.dll",
+        "lib/netstandard2.0/Fluxor.Blazor.Web.ReduxDevTools.dll",
+        "lib/netstandard2.1/Fluxor.Blazor.Web.ReduxDevTools.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.4": {
       "sha512": "Dwzl3JvBpPo6kkw8uZ+I/s7qzUDZ9YeGkLecFKevfk69YoKN945VfLREV06fJnINaC/cGkPy7cd/mvMyiyaQ0w==",
       "type": "package",
@@ -1087,6 +1307,37 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.IO.Pipelines/5.0.1": {
       "sha512": "qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
       "type": "package",
@@ -1138,6 +1389,10 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BlazorToastify >= 1.0.1",
+      "Fluxor >= 4.0.0",
+      "Fluxor.Blazor.Web >= 4.0.0",
+      "Fluxor.Blazor.Web.ReduxDevTools >= 4.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.4",
       "System.Net.Http.Json >= 5.0.0"
@@ -1186,6 +1441,22 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "BlazorToastify": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
+          "Fluxor": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Fluxor.Blazor.Web": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Fluxor.Blazor.Web.ReduxDevTools": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.4, )"

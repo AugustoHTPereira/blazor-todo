@@ -82,22 +82,35 @@ using TodoBlazor.Components;
 #line default
 #line hidden
 #nullable disable
-    public partial class Nav : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 11 "D:\dev\TodoBlazor\_Imports.razor"
+using TodoBlazor.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\dev\TodoBlazor\_Imports.razor"
+using BlazorToastify;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "D:\dev\TodoBlazor\Components\Nav.razor"
+using Fluxor;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class Nav : Fluxor.Blazor.Web.Components.FluxorComponent
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 35 "D:\dev\TodoBlazor\Components\Nav.razor"
-       
-    [Parameter]
-    public int TodoCount { get; set; }
-
-#line default
-#line hidden
-#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IState<TodoBlazor.Store.Todo.TodoState> TodoState { get; set; }
     }
 }
 #pragma warning restore 1591

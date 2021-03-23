@@ -82,8 +82,36 @@ using TodoBlazor.Components;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "D:\dev\TodoBlazor\_Imports.razor"
+using TodoBlazor.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\dev\TodoBlazor\_Imports.razor"
+using BlazorToastify;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\dev\TodoBlazor\Pages\Index.razor"
+using Fluxor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\dev\TodoBlazor\Pages\Index.razor"
+using TodoBlazor.Store.Todo.Actions;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Index : Fluxor.Blazor.Web.Components.FluxorComponent
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,39 +119,36 @@ using TodoBlazor.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 48 "D:\dev\TodoBlazor\Pages\Index.razor"
+#line 53 "D:\dev\TodoBlazor\Pages\Index.razor"
        
-    public class Todo
+    public Todo todo = new Todo();
+
+    private async Task HandleAddTodoAsync()
     {
-        public string Name { get; set; }
-        public bool Done { get; set; }
-        public Guid Id { get; set; }
-    }
+        Dispatcher.Dispatch(new AddTodo(todo.Name));
 
-    Todo todo = new Todo();
-
-    private void HandleAddTodo()
-    {
-        todo.Id = Guid.NewGuid();
-        todo.Done = false;
-
-        if (!string.IsNullOrEmpty(todo.Name))
-            todos.Add(todo);
-
+        await ToastService.AddToastAsync("Todo successfully added", "success");
         todo = new Todo();
     }
 
-    private void HandleRemoveTodo(Guid todoId)
+    private async Task HandleRemoveTodo(Todo todo)
     {
-        Todo foundedTodo = todos.First(x => x.Id == todoId);
-        todos.Remove(foundedTodo);
+        Dispatcher.Dispatch(new RemoveTodo(todo));
+        await ToastService.AddToastAsync("Todo successfully removed", "success");
     }
 
-    IList<Todo> todos = new List<Todo>();
+    public async Task HandleToogleTodo(Todo todo)
+    {
+        Dispatcher.Dispatch(new ToogleTodo(todo));
+        await ToastService.AddToastAsync("The todo is now " + (todo.Done ? "done" : "left"), "danger");
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IDispatcher Dispatcher { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IState<TodoBlazor.Store.Todo.TodoState> TodoState { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IToastService ToastService { get; set; }
     }
 }
 #pragma warning restore 1591

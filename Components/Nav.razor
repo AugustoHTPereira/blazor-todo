@@ -1,9 +1,13 @@
+@using Fluxor;
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent;
+@inject IState<TodoBlazor.Store.Todo.TodoState> TodoState;
+
 <div class="nav content">
     <div style="display: flex; align-items: center; justify-content: space-between;">
         <h1>Todo Blazor WASM App</h1>
 
         <span>
-            @TodoCount left todo
+            @TodoState.Value.Todos.Count(x => !x.Done) left todo
         </span>
     </div>
 </div>
@@ -28,11 +32,5 @@
         font-size: .8rem;
         font-weight: 400;
         color: white;
-
     }
 </style>
-
-@code {
-    [Parameter]
-    public int TodoCount { get; set; }
-}

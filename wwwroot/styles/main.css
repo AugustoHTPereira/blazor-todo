@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: aliceblue;
+}
+
 body {
   font-size: 14pt;
 }

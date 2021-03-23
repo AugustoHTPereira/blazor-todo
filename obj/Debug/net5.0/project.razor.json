@@ -137,7 +137,7 @@
         }
       },
       {
-        "HashCode": 460719493,
+        "HashCode": 1342335084,
         "Kind": "Components.Component",
         "Name": "TodoBlazor.Components.Nav",
         "AssemblyName": "TodoBlazor",
@@ -147,23 +147,13 @@
             "TagName": "Nav"
           }
         ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "TodoCount",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "TodoCount"
-            }
-          }
-        ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "TodoBlazor.Components.Nav"
         }
       },
       {
-        "HashCode": 532554890,
+        "HashCode": -1899964434,
         "Kind": "Components.Component",
         "Name": "TodoBlazor.Components.Nav",
         "AssemblyName": "TodoBlazor",
@@ -171,16 +161,6 @@
         "TagMatchingRules": [
           {
             "TagName": "TodoBlazor.Components.Nav"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "TodoCount",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "TodoCount"
-            }
           }
         ],
         "Metadata": {
@@ -219,6 +199,223 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "TodoBlazor.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1839683086,
+        "Kind": "Components.Component",
+        "Name": "BlazorToastify.ToastContainer",
+        "AssemblyName": "BlazorToastify",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToastContainer"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorToastify.ToastContainer"
+        }
+      },
+      {
+        "HashCode": -11783101,
+        "Kind": "Components.Component",
+        "Name": "BlazorToastify.ToastContainer",
+        "AssemblyName": "BlazorToastify",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorToastify.ToastContainer"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorToastify.ToastContainer",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1950195301,
+        "Kind": "Components.Component",
+        "Name": "Fluxor.Blazor.Web.StoreInitializer",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "StoreInitializer"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "UnhandledException",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<Fluxor.Exceptions.UnhandledExceptionEventArgs>",
+            "Metadata": {
+              "Common.PropertyName": "UnhandledException",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fluxor.Blazor.Web.StoreInitializer"
+        }
+      },
+      {
+        "HashCode": 1361652930,
+        "Kind": "Components.Component",
+        "Name": "Fluxor.Blazor.Web.StoreInitializer",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Fluxor.Blazor.Web.StoreInitializer"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "UnhandledException",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<Fluxor.Exceptions.UnhandledExceptionEventArgs>",
+            "Metadata": {
+              "Common.PropertyName": "UnhandledException",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fluxor.Blazor.Web.StoreInitializer",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1604154415,
+        "Kind": "Components.Component",
+        "Name": "Fluxor.Blazor.Web.Components.FluxorComponent",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FluxorComponent"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fluxor.Blazor.Web.Components.FluxorComponent"
+        }
+      },
+      {
+        "HashCode": 812054817,
+        "Kind": "Components.Component",
+        "Name": "Fluxor.Blazor.Web.Components.FluxorComponent",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Fluxor.Blazor.Web.Components.FluxorComponent"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fluxor.Blazor.Web.Components.FluxorComponent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1116087458,
+        "Kind": "Components.Component",
+        "Name": "Fluxor.Blazor.Web.Components.FluxorLayout",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FluxorLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fluxor.Blazor.Web.Components.FluxorLayout"
+        }
+      },
+      {
+        "HashCode": -296949142,
+        "Kind": "Components.Component",
+        "Name": "Fluxor.Blazor.Web.Components.FluxorLayout",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Fluxor.Blazor.Web.Components.FluxorLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Fluxor.Blazor.Web.Components.FluxorLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -236474454,
+        "Kind": "Components.ChildContent",
+        "Name": "Fluxor.Blazor.Web.Components.FluxorLayout.Body",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "FluxorLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Fluxor.Blazor.Web.Components.FluxorLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 1215884866,
+        "Kind": "Components.ChildContent",
+        "Name": "Fluxor.Blazor.Web.Components.FluxorLayout.Body",
+        "AssemblyName": "Fluxor.Blazor.Web",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "Fluxor.Blazor.Web.Components.FluxorLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Fluxor.Blazor.Web.Components.FluxorLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

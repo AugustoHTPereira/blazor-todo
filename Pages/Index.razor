@@ -1,7 +1,11 @@
 ﻿@page "/"
+@inject IToastService ToastService;
 
-<Nav TodoCount="todos.Count(x => !x.Done)" />
-
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent;
+@using Fluxor;
+@using TodoBlazor.Store.Todo.Actions
+@inject IState<TodoBlazor.Store.Todo.TodoState> TodoState;
+@inject IDispatcher Dispatcher;
 
 <div class="index box content">
     <div class="title">
@@ -9,7 +13,7 @@
         <legend>Add new todo to your todo list</legend>
     </div>
 
-    <EditForm Model="todo" class="body" OnSubmit="HandleAddTodo">
+    <EditForm class="body" OnSubmit="HandleAddTodoAsync" Model="todo">
         <div class="input-field">
             <InputText type="text" id="name" placeholder="Name of todo" aria-placeholder="Name of todo"
                 aria-autocomplete="none" autocomplete="off" @bind-Value="todo.Name" />
@@ -18,15 +22,16 @@
         </div>
     </EditForm>
 
-    @if (todos.Count > 0)
+    @if (TodoState.Value.Todos.Count > 0)
     {
         <div style="padding: 0 35px 35px; max-height: 360px; overflow-y: auto;">
             <table class="data">
-                @foreach (var todo in todos)
+                @foreach (var todo in TodoState.Value.Todos)
                 {
                     <tr>
                         <td class="data-id">
-                            <input type="checkbox" name="@todo.Id" id="@todo.Id" @bind="todo.Done">
+                            <input type="checkbox" name="@todo.Id" id="@todo.Id" value="@todo.Done"
+                                @onchange="() => HandleToogleTodo(todo)">
                         </td>
                         <td>
                             <span style="color: #434343; font-size: 1.2rem;">
@@ -34,7 +39,7 @@
                             </span>
                         </td>
                         <td class="data-actions">
-                            <button class="del" @onclick="() => HandleRemoveTodo(todo.Id)">
+                            <button class="del" @onclick="() => HandleRemoveTodo(todo)">
                                 &times;
                             </button>
                         </td>
@@ -46,33 +51,27 @@
 </div>
 
 @code {
-    public class Todo
+    public Todo todo = new Todo();
+
+    private async Task HandleAddTodoAsync()
     {
-        public string Name { get; set; }
-        public bool Done { get; set; }
-        public Guid Id { get; set; }
-    }
+        Dispatcher.Dispatch(new AddTodo(todo.Name));
 
-    Todo todo = new Todo();
-
-    private void HandleAddTodo()
-    {
-        todo.Id = Guid.NewGuid();
-        todo.Done = false;
-
-        if (!string.IsNullOrEmpty(todo.Name))
-            todos.Add(todo);
-
+        await ToastService.AddToastAsync("Todo successfully added", "success");
         todo = new Todo();
     }
 
-    private void HandleRemoveTodo(Guid todoId)
+    private async Task HandleRemoveTodo(Todo todo)
     {
-        Todo foundedTodo = todos.First(x => x.Id == todoId);
-        todos.Remove(foundedTodo);
+        Dispatcher.Dispatch(new RemoveTodo(todo));
+        await ToastService.AddToastAsync("Todo successfully removed", "success");
     }
 
-    IList<Todo> todos = new List<Todo>();
+    public async Task HandleToogleTodo(Todo todo)
+    {
+        Dispatcher.Dispatch(new ToogleTodo(todo));
+        await ToastService.AddToastAsync("The todo is now " + (todo.Done ? "done" : "left"), "danger");
+    }
 }
 
 <style>

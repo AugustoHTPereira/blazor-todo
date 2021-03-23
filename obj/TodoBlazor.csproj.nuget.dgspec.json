@@ -43,6 +43,22 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "BlazorToastify": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Fluxor": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Fluxor.Blazor.Web": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Fluxor.Blazor.Web.ReduxDevTools": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[5.0.4, )"
